@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Design Tokens — V. Bhanu Portfolio
+   Dark obsidian surfaces paired with indigo, sky-cyan, and teal accents.
+   ========================================================================== */
+
+:root {
+  /* Surface Palette */
+  --bg-base: #07090e;
+  --bg-surface: #0c101a;
+  --bg-elevated: #121826;
+  --bg-glass: rgba(13, 18, 30, 0.72);
+  --bg-glass-hover: rgba(21, 29, 47, 0.85);
+
+  /* Text Hierarchy */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Accent & Gradient System */
+  --accent-indigo: #818cf8;
+  --accent-indigo-strong: #6366f1;
+  --accent-cyan: #38bdf8;
+  --accent-teal: #2dd4bf;
+  --accent-success: #34d399;
+  --accent-danger: #f87171;
+  --accent-warning: #fbbf24;
+
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #38bdf8 55%, #2dd4bf 100%);
+  --gradient-text: linear-gradient(120deg, #e0e7ff 0%, #818cf8 35%, #38bdf8 72%, #2dd4bf 100%);
+  --gradient-border: linear-gradient(135deg, rgba(129, 140, 248, 0.45), rgba(56, 189, 248, 0.35), rgba(45, 212, 191, 0.35));
+
+  /* Borders & Hairlines */
+  --border-subtle: rgba(148, 163, 184, 0.14);
+  --border-medium: rgba(148, 163, 184, 0.24);
+  --border-focus: rgba(56, 189, 248, 0.65);
+
+  /* Shadows & Glows */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.42);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.56);
+  --glow-primary: 0 10px 30px -6px rgba(99, 102, 241, 0.42), 0 4px 16px -4px rgba(56, 189, 248, 0.28);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: clamp(1.75rem, 3vw, 2.25rem);
+  --text-hero: clamp(2.35rem, 5vw, 3.85rem);
+
+  /* Spacing & Layout */
+  --container-max: 1180px;
+  --nav-height: 74px;
+  --section-py: clamp(4.5rem, 8vw, 7rem);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 180ms var(--ease-out);
+  --transition-base: 280ms var(--ease-out);
+  --transition-slow: 520ms var(--ease-out);
+}
+
