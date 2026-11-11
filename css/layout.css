@@ -15,12 +15,10 @@
 }
 
 .section--tinted {
-  background: linear-gradient(
-    180deg,
-    rgba(12, 16, 26, 0) 0%,
-    rgba(12, 16, 26, 0.6) 50%,
-    rgba(12, 16, 26, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(12, 16, 26, 0) 0%,
+      rgba(12, 16, 26, 0.6) 50%,
+      rgba(12, 16, 26, 0) 100%);
 }
 
 /* Scroll Progress Line */
@@ -340,4 +338,3 @@
     display: none;
   }
 }
-
