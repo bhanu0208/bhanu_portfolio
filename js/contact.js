@@ -122,7 +122,7 @@
   }
 
   function buildMailtoUrl(payload) {
-    const recipient = config.email || 'v.bhanu.dev@example.com';
+    const recipient = config.email || 'bhanuvakiti8@gmail.com';
     const subject = encodeURIComponent('[Portfolio] ' + payload.subject);
     const body = encodeURIComponent(
       'Name: ' + payload.name + '\nEmail: ' + payload.email + '\n\n' + payload.message

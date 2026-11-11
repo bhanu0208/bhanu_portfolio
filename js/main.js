@@ -100,20 +100,24 @@
     if (drawerClose) drawerClose.focus();
   }
 
-  function closeDrawer() {
+  function closeDrawer(options) {
     if (!mobileDrawer || !navToggle) return;
+    const wasOpen = mobileDrawer.classList.contains('is-open');
     mobileDrawer.classList.remove('is-open');
     mobileDrawer.setAttribute('aria-hidden', 'true');
     navToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    if (wasOpen && options && options.restoreFocus) {
+      navToggle.focus();
+    }
   }
 
   if (navToggle) navToggle.addEventListener('click', openDrawer);
-  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
-  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+  if (drawerClose) drawerClose.addEventListener('click', () => closeDrawer({ restoreFocus: true }));
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', () => closeDrawer());
 
   drawerLinks.forEach((link) => {
-    link.addEventListener('click', closeDrawer);
+    link.addEventListener('click', () => closeDrawer());
   });
 
   /* Skill Category Filter */
@@ -215,11 +219,17 @@
       closeProjectModal();
     }
     if (mobileDrawer && mobileDrawer.classList.contains('is-open')) {
-      closeDrawer();
+      closeDrawer({ restoreFocus: true });
     }
   });
 
-  /* Hydrate Editable Contact Links From Config */
+  function formatDisplayUrl(url) {
+    return String(url || '')
+      .replace(/^https?:\/\/(www\.)?/i, '')
+      .replace(/\/+$/, '');
+  }
+
+  /* Hydrate Editable Contact, Education & Project Links From Config */
   const cfg = window.PORTFOLIO_CONFIG;
   if (cfg) {
     document.querySelectorAll('[data-config-email]').forEach((el) => {
@@ -239,8 +249,43 @@
       if (el.tagName === 'A') el.href = cfg.githubUrl;
     });
 
+    document.querySelectorAll('[data-config-github-text]').forEach((el) => {
+      el.textContent = formatDisplayUrl(cfg.githubUrl);
+    });
+
     document.querySelectorAll('[data-config-linkedin]').forEach((el) => {
       if (el.tagName === 'A') el.href = cfg.linkedinUrl;
     });
+
+    document.querySelectorAll('[data-config-linkedin-text]').forEach((el) => {
+      el.textContent = formatDisplayUrl(cfg.linkedinUrl);
+    });
+
+    if (cfg.education) {
+      document.querySelectorAll('[data-config-degree]').forEach((el) => {
+        if (cfg.education.degreeFull) el.textContent = cfg.education.degreeFull;
+      });
+      document.querySelectorAll('[data-config-period]').forEach((el) => {
+        if (cfg.education.period) el.textContent = cfg.education.period;
+      });
+      document.querySelectorAll('[data-config-institution]').forEach((el) => {
+        if (cfg.education.institution) el.textContent = cfg.education.institution;
+      });
+      document.querySelectorAll('[data-config-location]').forEach((el) => {
+        if (cfg.education.location) el.textContent = cfg.education.location;
+      });
+      document.querySelectorAll('[data-config-branch]').forEach((el) => {
+        if (cfg.education.branch) el.textContent = cfg.education.branch;
+      });
+    }
   }
+
+  const projectsMap = window.PROJECTS_DATA || {};
+  document.querySelectorAll('[data-project-github]').forEach((el) => {
+    const projectId = el.getAttribute('data-project-github');
+    const project = projectsMap[projectId];
+    if (project && project.githubUrl && el.tagName === 'A') {
+      el.href = project.githubUrl;
+    }
+  });
 })();

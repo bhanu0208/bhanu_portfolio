@@ -26,7 +26,7 @@ vakiti_bhanu_portfolio/
 ## Customization Checklist
 
 1. **Profile Image**: Replace `assets/profile-placeholder.svg` (or update the `<img src="...">` inside `index.html`).
-2. **College & Branch**: Update `[Your College / University Name Placeholder]` and `[Branch Placeholder]` in the Education section of `index.html`.
+2. **College & Branch**: Update `PORTFOLIO_CONFIG.education` in `js/data.js` (and fallback text in `index.html`).
 3. **Social Links & Email**: Update `PORTFOLIO_CONFIG` in `js/data.js` (and fallback hrefs in `index.html`).
 4. **Projects**: Update `PROJECTS_DATA` in `js/data.js` and the project cards in `index.html` as you build real projects.
 5. **Resume**: Customize `assets/V_Bhanu_Resume.html` (or swap in a PDF file and update the `Download Resume` link).

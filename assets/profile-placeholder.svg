@@ -39,7 +39,7 @@
 
   <!-- Subtle Code Marks -->
   <text x="34" y="54" fill="#64748b" font-family="monospace" font-size="13" opacity="0.65">&lt;dev /&gt;</text>
-  <text x="326" y="54" fill="#38bdf8" font-family="monospace" font-size="13" opacity="0.75">B.Tech Y1</text>
+  <text x="386" y="54" text-anchor="end" fill="#38bdf8" font-family="monospace" font-size="13" opacity="0.75">B.Tech · 1st Yr</text>
 
   <!-- Minimalist Developer Silhouette -->
   <path d="M98 424C104 342 148 302 210 302C272 302 316 342 322 424" fill="url(#silhouette-fill)" stroke="url(#accent-stroke)" stroke-opacity="0.55" stroke-width="2" />

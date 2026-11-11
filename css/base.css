@@ -301,6 +301,7 @@ h4 {
 
 /* Glass Surface Card */
 .card {
+  min-width: 0;
   background: var(--bg-glass);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);

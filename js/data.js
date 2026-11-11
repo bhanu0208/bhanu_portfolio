@@ -5,9 +5,20 @@
 
 window.PORTFOLIO_CONFIG = {
   ownerName: 'V. Bhanu',
-  email: 'v.bhanu.dev@example.com', // Replace with your actual email address
+  degree: 'B.Tech',
+  year: '1st Year',
+  careerGoal: 'Aspiring Software Developer',
+  email: 'bhanuvakiti8@gmail.com',
   githubUrl: 'https://github.com/your-username', // Replace with your GitHub profile URL
   linkedinUrl: 'https://linkedin.com/in/your-profile', // Replace with your LinkedIn profile URL
+
+  education: {
+    degreeFull: 'Bachelor of Technology (B.Tech)',
+    period: '1st Year · Current',
+    institution: 'Joy University',
+    location: 'Kanyakumari, Tamil Nadu',
+    branch: 'CSE (AI & ML)'
+  },
 
   /*
    * Contact Form Integration Options:
