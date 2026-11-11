@@ -9,8 +9,8 @@ window.PORTFOLIO_CONFIG = {
   year: '1st Year',
   careerGoal: 'Aspiring Software Developer',
   email: 'bhanuvakiti8@gmail.com',
-  githubUrl: 'https://github.com/your-username', // Replace with your GitHub profile URL
-  linkedinUrl: 'https://linkedin.com/in/your-profile', // Replace with your LinkedIn profile URL
+  githubUrl: 'https://github.com/bhanu0208',
+  linkedinUrl: 'https://www.linkedin.com/in/vakiti-bhanu0208',
 
   education: {
     degreeFull: 'Bachelor of Technology (B.Tech)',
@@ -45,7 +45,7 @@ window.PROJECTS_DATA = {
     summary:
       'A placeholder showcase demonstrating a responsive, accessible multi-section web layout built with semantic HTML5, modern CSS Grid/Flexbox, and vanilla JavaScript interactivity.',
     stack: ['HTML5', 'CSS3', 'JavaScript'],
-    githubUrl: 'https://github.com/your-username/portfolio-starter',
+    githubUrl: 'https://github.com/bhanu0208', // Replace with specific repo URL once published
     highlights: [
       'Semantic document structure with keyboard navigation and ARIA landmarks.',
       'Modular CSS custom properties for consistent dark-theme spacing and gradients.',
@@ -59,7 +59,7 @@ window.PROJECTS_DATA = {
     summary:
       'A starter project template designed for practicing Python file handling, structured functions, and command-line input validation for daily coursework tracking.',
     stack: ['Python', 'JSON Storage', 'CLI'],
-    githubUrl: 'https://github.com/your-username/python-study-tracker',
+    githubUrl: 'https://github.com/bhanu0208', // Replace with specific repo URL once published
     highlights: [
       'Clean modular functions for adding, listing, and completing study tasks.',
       'Local JSON persistence with defensive error handling for malformed input.',
@@ -73,7 +73,7 @@ window.PROJECTS_DATA = {
     summary:
       'A placeholder repository template organizing foundational C programming exercises covering arrays, pointers, structures, and core sorting or searching algorithms.',
     stack: ['C Programming', 'Data Structures', 'Algorithms'],
-    githubUrl: 'https://github.com/your-username/c-fundamentals-lab',
+    githubUrl: 'https://github.com/bhanu0208', // Replace with specific repo URL once published
     highlights: [
       'Structured problem sets practicing memory addressing and pointer safety.',
       'Step-by-step implementations of iterative and recursive logic patterns.',
