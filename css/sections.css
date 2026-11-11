@@ -50,10 +50,12 @@
 }
 
 @keyframes pulse-dot {
+
   0%,
   100% {
     box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.18);
   }
+
   50% {
     box-shadow: 0 0 0 7px rgba(45, 212, 191, 0.05);
   }
@@ -259,7 +261,7 @@
   line-height: 1.45;
 }
 
-.about-story p + p {
+.about-story p+p {
   margin-top: 1rem;
   color: var(--text-secondary);
 }
@@ -1063,4 +1065,3 @@
     flex-wrap: wrap;
   }
 }
-
